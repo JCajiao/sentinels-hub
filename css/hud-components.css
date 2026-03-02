@@ -1,1 +1,175 @@
 /* hud-components.css — HUD corners, vignette, scan lines, grid */
+
+/* === VIGNETTE OVERLAY === */
+.vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.6) 100%);
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* === SCAN LINES OVERLAY === */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    var(--hud-cyan-03) 2px,
+    var(--hud-cyan-03) 4px
+  );
+  pointer-events: none;
+  z-index: 1000;
+  animation: scanMove 8s linear infinite;
+}
+
+/* === SCAN BAR === */
+body::after {
+  content: '';
+  position: fixed;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--hud-cyan), transparent);
+  opacity: 0.6;
+  z-index: 1001;
+  animation: scanBar 4s linear infinite;
+}
+
+/* === GRID OVERLAY === */
+.hud-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(var(--hud-cyan-03) 1px, transparent 1px),
+    linear-gradient(90deg, var(--hud-cyan-03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 1;
+  animation: gridFadeIn 3s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+/* === POWER-UP FLASH === */
+.power-flash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, var(--hud-cyan-30), transparent 70%);
+  pointer-events: none;
+  z-index: 998;
+  animation: powerUp 1.5s ease-out forwards;
+}
+
+/* === CORNER BRACKETS (HUD frame) === */
+.hud-corner {
+  position: fixed;
+  width: var(--hud-corner-size);
+  height: var(--hud-corner-size);
+  border-color: var(--hud-cyan);
+  border-style: solid;
+  opacity: 0.5;
+  filter: drop-shadow(0 0 3px var(--hud-cyan-30));
+  animation: cornerPulse 3s ease-in-out infinite;
+  z-index: 100;
+}
+
+.hud-corner.top-left {
+  top: var(--hud-corner-offset);
+  left: var(--hud-corner-offset);
+  border-width: 2px 0 0 2px;
+}
+
+.hud-corner.top-right {
+  top: var(--hud-corner-offset);
+  right: var(--hud-corner-offset);
+  border-width: 2px 2px 0 0;
+}
+
+.hud-corner.bottom-left {
+  bottom: var(--hud-corner-offset);
+  left: var(--hud-corner-offset);
+  border-width: 0 0 2px 2px;
+}
+
+.hud-corner.bottom-right {
+  bottom: var(--hud-corner-offset);
+  right: var(--hud-corner-offset);
+  border-width: 0 2px 2px 0;
+}
+
+/* Corner tick marks */
+.hud-corner::after {
+  content: '';
+  position: absolute;
+  background: var(--hud-cyan);
+  opacity: 0.4;
+}
+
+.hud-corner.top-left::after {
+  top: 15px;
+  left: 0;
+  width: 20px;
+  height: 1px;
+}
+
+.hud-corner.top-right::after {
+  top: 15px;
+  right: 0;
+  width: 20px;
+  height: 1px;
+}
+
+.hud-corner.bottom-left::after {
+  bottom: 15px;
+  left: 0;
+  width: 20px;
+  height: 1px;
+}
+
+.hud-corner.bottom-right::after {
+  bottom: 15px;
+  right: 0;
+  width: 20px;
+  height: 1px;
+}
+
+/* === DIVIDER LINE === */
+.hud-divider {
+  width: 500px;
+  max-width: 80vw;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--hud-cyan), transparent);
+  margin: 15px auto;
+  position: relative;
+  animation: fadeIn 1s ease-out 0.8s forwards;
+  opacity: 0;
+}
+
+.hud-divider::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background: var(--hud-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--hud-cyan);
+}
