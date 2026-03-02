@@ -35,10 +35,14 @@
       "status": "passed"
     },
     "G4": {
-      "status": "pending"
+      "checked_at": "2026-03-02T12:14:42.452968+00:00",
+      "note": "Code review approved by Agent Smith: 0 blockers, 4 minor improvements suggested, 3 nits. Clean code, secure (escapeHtml, no eval), faithful HUD design, 15/15 tasks implemented, localStorage persistence, responsive 3 breakpoints.",
+      "status": "passed"
     },
     "G5": {
-      "status": "pending"
+      "checked_at": "2026-03-02T12:26:53.206143+00:00",
+      "note": "QA + compliance verification passed \u2014 30/30 tests pass, 0 bugs, 5/5 AC met, 6/6 DoD met, 15/15 tasks verified, ISO 9001/27001/42001/SOC2/ENS-Alta all PASS. 6 non-blocking warnings (accessibility for v0.2.0)",
+      "status": "passed"
     },
     "G6": {
       "status": "pending"
@@ -71,7 +75,7 @@
   "status": "active",
   "timestamps": {
     "created_at": "2026-03-02T11:14:02.051064+00:00",
-    "updated_at": "2026-03-02T12:05:31.548533+00:00"
+    "updated_at": "2026-03-02T12:26:53.206143+00:00"
   },
   "traceability": {
     "github": {
