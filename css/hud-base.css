@@ -1,1 +1,93 @@
 /* hud-base.css — CSS variables, reset, base styles */
+
+/* === CSS CUSTOM PROPERTIES === */
+:root {
+  /* Primary colors — from jarvis-hola-mundo */
+  --hud-cyan: #00d4ff;
+  --hud-orange: #ff8c00;
+  --hud-green: #00ff88;
+  --hud-bg: #0a0a0a;
+  --hud-white: #ffffff;
+
+  /* Glow variants */
+  --hud-cyan-mid: #0088aa;
+  --hud-cyan-deep: #005577;
+  --hud-cyan-light: #00aacc;
+
+  /* Opacity variants */
+  --hud-cyan-02: rgba(0, 212, 255, 0.02);
+  --hud-cyan-03: rgba(0, 212, 255, 0.03);
+  --hud-cyan-04: rgba(0, 212, 255, 0.04);
+  --hud-cyan-10: rgba(0, 212, 255, 0.1);
+  --hud-cyan-15: rgba(0, 212, 255, 0.15);
+  --hud-cyan-20: rgba(0, 212, 255, 0.2);
+  --hud-cyan-30: rgba(0, 212, 255, 0.3);
+  --hud-cyan-50: rgba(0, 212, 255, 0.5);
+  --hud-orange-20: rgba(255, 140, 0, 0.2);
+  --hud-orange-50: rgba(255, 140, 0, 0.5);
+
+  /* Typography */
+  --font-mono: 'Courier New', 'Lucida Console', 'Monaco', monospace;
+
+  /* Spacing */
+  --hud-corner-size: 60px;
+  --hud-corner-offset: 20px;
+
+  /* Transitions */
+  --transition-fast: 0.3s ease;
+  --transition-med: 0.5s ease;
+}
+
+/* === RESET === */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  font-family: var(--font-mono);
+  background: var(--hud-bg);
+  background-image:
+    radial-gradient(ellipse at 50% 50%, var(--hud-cyan-04) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 50%, rgba(0, 30, 60, 0.3) 0%, var(--hud-bg) 70%);
+  color: var(--hud-cyan);
+  overflow-x: hidden;
+}
+
+/* === SCROLLBAR STYLING === */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--hud-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--hud-cyan-30);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hud-cyan-50);
+}
+
+/* === SELECTION === */
+::selection {
+  background: var(--hud-cyan-30);
+  color: var(--hud-white);
+}
+
+/* === BASE LINK STYLES === */
+a {
+  color: var(--hud-cyan);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--hud-white);
+}
