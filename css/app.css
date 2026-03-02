@@ -652,3 +652,250 @@
   animation: dotBlink 1.5s ease-in-out infinite;
   vertical-align: middle;
 }
+
+/* =========================================================================
+   RESPONSIVE BREAKPOINTS [WP#1905]
+   ========================================================================= */
+
+/* === TABLET (max-width: 768px) === */
+@media (max-width: 768px) {
+  .hud-container {
+    padding: 20px 15px;
+  }
+
+  .hud-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.6rem;
+  }
+
+  .hud-subtitle {
+    font-size: 0.6rem;
+    letter-spacing: 0.25rem;
+  }
+
+  .hud-nav {
+    gap: 15px;
+  }
+
+  .nav-link {
+    font-size: 0.6rem;
+    letter-spacing: 0.15rem;
+    padding: 5px 12px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    letter-spacing: 0.8rem;
+  }
+
+  .hud-data {
+    gap: 15px;
+  }
+
+  .data-block {
+    padding: 8px 14px;
+  }
+
+  .data-label {
+    font-size: 0.5rem;
+  }
+
+  .data-value {
+    font-size: 0.7rem;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .policy-card {
+    padding: 14px 16px;
+  }
+
+  .policy-card-title {
+    font-size: 0.85rem;
+  }
+
+  .hud-corner {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hud-corner.top-left::after,
+  .hud-corner.top-right::after,
+  .hud-corner.bottom-left::after,
+  .hud-corner.bottom-right::after {
+    width: 14px;
+  }
+
+  .complete-title {
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .progress-count {
+    font-size: 2rem;
+  }
+}
+
+/* === MOBILE (max-width: 480px) === */
+@media (max-width: 480px) {
+  .hud-container {
+    padding: 15px 10px;
+  }
+
+  .hud-title {
+    font-size: 1.3rem;
+    letter-spacing: 0.4rem;
+  }
+
+  .hud-subtitle {
+    font-size: 0.5rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .hud-nav {
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 0.5rem;
+    letter-spacing: 0.1rem;
+    padding: 4px 8px;
+  }
+
+  .nav-link.active::before {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.6rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .hud-data {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .data-block {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .status-line {
+    font-size: 0.6rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .typing-wrapper {
+    display: none; /* Too narrow for typing effect */
+  }
+
+  .section-title {
+    font-size: 0.9rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.55rem;
+  }
+
+  .policy-card {
+    padding: 12px 14px;
+  }
+
+  .policy-card-title {
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .policy-card-summary {
+    font-size: 0.6rem;
+  }
+
+  .policy-content-text {
+    font-size: 0.6rem;
+    line-height: 1.7;
+  }
+
+  .hud-checkbox-label {
+    font-size: 0.55rem;
+  }
+
+  .hud-btn {
+    font-size: 0.55rem;
+    padding: 8px 16px;
+    letter-spacing: 0.15rem;
+  }
+
+  .hud-corner {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hud-corner.top-left,
+  .hud-corner.bottom-left {
+    left: 10px;
+  }
+
+  .hud-corner.top-right,
+  .hud-corner.bottom-right {
+    right: 10px;
+  }
+
+  .hud-corner.top-left,
+  .hud-corner.top-right {
+    top: 10px;
+  }
+
+  .hud-corner.bottom-left,
+  .hud-corner.bottom-right {
+    bottom: 10px;
+  }
+
+  .hud-corner::after {
+    display: none;
+  }
+
+  .complete-title {
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .complete-subtitle {
+    font-size: 0.55rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .progress-count {
+    font-size: 1.8rem;
+  }
+
+  .progress-policy-item {
+    padding: 8px 10px;
+    font-size: 0.55rem;
+  }
+
+  .footer-line {
+    font-size: 0.45rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .footer-sub {
+    font-size: 0.4rem;
+  }
+
+  .hud-divider {
+    max-width: 60vw;
+  }
+}
