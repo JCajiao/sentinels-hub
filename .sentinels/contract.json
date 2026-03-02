@@ -1,0 +1,88 @@
+{
+  "actor": {
+    "declared": {
+      "github": {
+        "email": "jorgecajiao@gmail.com",
+        "login": "JCajiao"
+      },
+      "name": "JCajiao",
+      "openproject": {
+        "email": "jc@sentinelshub.com",
+        "id": "3"
+      }
+    }
+  },
+  "contract_id": "CTR-sentinels-hub-20260302",
+  "gates": {
+    "G0": {
+      "checked_at": "2026-03-02T11:14:02.051064+00:00",
+      "note": "Contract initialized before implementation",
+      "status": "passed"
+    },
+    "G1": {
+      "checked_at": "2026-03-02T11:51:16.370771+00:00",
+      "note": "Requirements validated \u2014 research completed, acceptance criteria defined",
+      "status": "passed"
+    },
+    "G2": {
+      "checked_at": "2026-03-02T11:51:17.991486+00:00",
+      "note": "Plan aprobado y cargado a OpenProject \u2014 19 WPs creados (4 Features, 4 US, 15 Tasks), 14h estimadas, v0.1.0 asignada",
+      "status": "passed"
+    },
+    "G3": {
+      "status": "pending"
+    },
+    "G4": {
+      "status": "pending"
+    },
+    "G5": {
+      "status": "pending"
+    },
+    "G6": {
+      "status": "pending"
+    },
+    "G7": {
+      "status": "pending"
+    }
+  },
+  "plan": {
+    "acceptance_criteria": [
+      "Contract stays synchronized with OpenProject and GitHub"
+    ],
+    "definition_of_done": [
+      "Evidence URL linked and closure gate completed"
+    ],
+    "summary": "Web HTML onboarding personal - pol\u00edticas, confirmaci\u00f3n recepci\u00f3n, est\u00e9tica jarvis-hola-mundo"
+  },
+  "protocol_version": "1.0",
+  "scope": {
+    "in_scope": [
+      "Web HTML onboarding personal - pol\u00edticas, confirmaci\u00f3n recepci\u00f3n, est\u00e9tica jarvis-hola-mundo"
+    ],
+    "out_of_scope": [
+      "Out-of-scope work must be declared before execution"
+    ],
+    "repositories": [
+      "sentinels-hub"
+    ]
+  },
+  "status": "active",
+  "timestamps": {
+    "created_at": "2026-03-02T11:14:02.051064+00:00",
+    "updated_at": "2026-03-02T11:51:17.991486+00:00"
+  },
+  "traceability": {
+    "github": {
+      "branch": "HEAD\nunknown",
+      "commits": []
+    },
+    "openproject": {
+      "contract_id_field": "CTR-sentinels-hub-20260302",
+      "work_package_url": "https://sentinels.openproject.com/work_packages/1837"
+    }
+  },
+  "work_package": {
+    "id": 1837,
+    "project": "sentinels-hub"
+  }
+}

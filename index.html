@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentinels Hub — Onboarding</title>
+  <link rel="stylesheet" href="css/hud-base.css">
+  <link rel="stylesheet" href="css/hud-components.css">
+  <link rel="stylesheet" href="css/hud-animations.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+  <!-- HUD Overlays -->
+  <div class="power-flash"></div>
+  <div class="hud-grid"></div>
+  <div class="vignette"></div>
+
+  <!-- HUD Corner Brackets -->
+  <div class="hud-corner top-left"></div>
+  <div class="hud-corner top-right"></div>
+  <div class="hud-corner bottom-left"></div>
+  <div class="hud-corner bottom-right"></div>
+
+  <!-- Main App Container -->
+  <div class="hud-container" id="app">
+
+    <!-- Header / Nav -->
+    <header class="hud-header" id="header">
+      <h1 class="hud-title">SENTINELS HUB</h1>
+      <p class="hud-subtitle">Personnel Onboarding System</p>
+      <nav class="hud-nav" id="nav">
+        <a href="#" class="nav-link active" data-section="home">Home</a>
+        <a href="#" class="nav-link" data-section="policies">Policies</a>
+        <a href="#" class="nav-link" data-section="progress">Progress</a>
+      </nav>
+    </header>
+
+    <!-- Divider -->
+    <div class="hud-divider"></div>
+
+    <!-- Section: Home -->
+    <section class="app-section active" id="section-home">
+      <div class="hero">
+        <h2 class="hero-title">WELCOME</h2>
+        <p class="hero-subtitle">Initializing onboarding protocol...</p>
+        <div class="status-line">
+          <span class="dot"></span>System Online &mdash; Awaiting Policy Confirmation
+        </div>
+        <div class="typing-wrapper">
+          <div class="typing-text">Loading personnel onboarding modules... standby for policy review.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Policies -->
+    <section class="app-section" id="section-policies">
+      <div class="section-header">
+        <h2 class="section-title">POLICY DATABASE</h2>
+        <p class="section-subtitle">Review and confirm each policy to complete onboarding</p>
+      </div>
+      <div class="policy-list" id="policy-list">
+        <!-- Policy cards rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Section: Progress -->
+    <section class="app-section" id="section-progress">
+      <div class="section-header">
+        <h2 class="section-title">ONBOARDING PROGRESS</h2>
+        <p class="section-subtitle">Track your policy confirmation status</p>
+      </div>
+      <div class="progress-panel" id="progress-panel">
+        <!-- Progress content rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="hud-footer">
+      <div class="footer-line">Sentinels Framework &mdash; Personnel Division</div>
+      <div class="footer-sub">Secure Channel &mdash; Encrypted &mdash; v0.1.0</div>
+    </footer>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
